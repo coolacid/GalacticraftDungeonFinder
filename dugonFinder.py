@@ -53,7 +53,7 @@ class GalacticraftDung:
                 oZ = j - zpos
                 distanceSq = oX * oX + oZ * oZ
                 if distanceSq < self.nearestDistance:
-                    return distanceSq, -oX, -oZ
+                    return distanceSq, oX, oZ
 
 g = GalacticraftDung(-1400251488)
 
