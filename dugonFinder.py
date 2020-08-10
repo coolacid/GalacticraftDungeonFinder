@@ -46,7 +46,7 @@ class GalacticraftDung:
         for cx in range(searchOffsetX - 1, searchOffsetX + 1):
             for cz in range(searchOffsetZ - 1, searchOffsetZ + 1):
                 k, l = self.getDungeonPosForCoords((x + cx * self.Spacing) / 16, (z + cz * self.Spacing) / 16, Dimention)
-#                print("k: {}, l: {}".format(k, l))
+                print("Expected chunk [{}, {}]".format(k, l))
                 i = 2 + k
                 j = 2 + l
                 oX = i - xpos
