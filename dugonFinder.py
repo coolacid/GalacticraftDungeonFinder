@@ -41,7 +41,7 @@ class GalacticraftDung:
         print("Got chunk [{}, {}]".format(k, l))
 
 
-    def directionToNearestDungeon(self, xpos, zpos, Dimention):
+    def directionToNearestDungeon(self, xpos, zpos, Dimension):
         x = math.floor(xpos)
         z = math.floor(zpos)
         quadrantX = x % self.Spacing;
@@ -52,7 +52,7 @@ class GalacticraftDung:
         nearestZ = 0
         for cx in range(searchOffsetX - 1, searchOffsetX + 2): # Python range is not ending inclusive
             for cz in range(searchOffsetZ - 1, searchOffsetZ + 2): # Python range is not ending inclusive
-                k, l = self.getDungeonPosForCoords((x + cx * self.Spacing) / 16, (z + cz * self.Spacing) / 16, Dimention)
+                k, l = self.getDungeonPosForCoords((x + cx * self.Spacing) / 16, (z + cz * self.Spacing) / 16, Dimension)
                 print("Got chunk [{}, {}]".format(k, l))
                 i = 2 + k
                 j = 2 + l
@@ -71,8 +71,12 @@ print("X: {}, Z: {}, D: {}".format(x, z, d))
 print("dat file shows (Chunk): [78,-31], which is: 1248, -496")
 #g.getChunkofDung(1327, -544, -12)
 
-#print("Location: 1428, -639")
-#d,x,z = g.directionToNearestDungeon(1428, -639, -14)
-#print("X: {}, Z: {}, D: {}".format(x, z, d))
-#print("Should be close to: 1249, -492")
+print("Location: 1424, -662")
+d,x,z = g.directionToNearestDungeon(1424, -662, -16)
+print("X: {}, Z: {}, D: {}".format(x, z, d))
+print("dat file shows (Chunk): [109,-64], which is: 1744, -1024")
 
+print("Location: 1424, -663")
+d,x,z = g.directionToNearestDungeon(1424, -663, -16)
+print("X: {}, Z: {}, D: {}".format(x, z, d))
+print("dat file shows (Chunk): [109,-64], which is: 1744, -1024")
