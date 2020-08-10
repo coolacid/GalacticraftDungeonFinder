@@ -46,7 +46,7 @@ class GalacticraftDung:
         for cx in range(searchOffsetX - 1, searchOffsetX + 1):
             for cz in range(searchOffsetZ - 1, searchOffsetZ + 1):
                 k, l = self.getDungeonPosForCoords((x + cx * self.Spacing) / 16, (z + cz * self.Spacing) / 16, Dimention)
-                print("k: {}, l: {}".format(k, l))
+#                print("k: {}, l: {}".format(k, l))
                 i = 2 + k
                 j = 2 + l
                 oX = i - xpos
@@ -60,11 +60,10 @@ g = GalacticraftDung(-1400251488)
 print("Location: 1327, -544")
 d,x,z = g.directionToNearestDungeon(1327, -544, -12)
 print("X: {}, Z: {}, D: {}".format(x, z, d))
-print("Should be close to: 1249, -492")
+print("dat file shows (Chunk): [78,-31], which is: 1248, -496")
 
-
-print("Location: 1428, -639")
-d,x,z = g.directionToNearestDungeon(1428, -639, -14)
-print("X: {}, Z: {}, D: {}".format(x, z, d))
-print("Should be close to: 1249, -492")
+#print("Location: 1428, -639")
+#d,x,z = g.directionToNearestDungeon(1428, -639, -14)
+#print("X: {}, Z: {}, D: {}".format(x, z, d))
+#print("Should be close to: 1249, -492")
 
